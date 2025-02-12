@@ -1,0 +1,10 @@
+.store {
+  width: 100%;
+}
+
+.store-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}

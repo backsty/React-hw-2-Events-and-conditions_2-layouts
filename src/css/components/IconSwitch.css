@@ -1,0 +1,11 @@
+.icon-switch {
+  font-size: 2rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition-main);
+}
+
+.icon-switch:hover {
+  color: var(--color-secondary);
+  transform: rotate(180deg);
+}

@@ -1,0 +1,108 @@
+.cards-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.cards-view::after {
+  content: '';
+  flex: 0 1 calc(33.333% - 2rem);
+  min-width: 18rem;
+  max-width: 22rem;
+}
+
+.cards-view .shop-card {
+  flex: 0 1 calc(33.333% - 2rem);
+  min-width: 18rem;
+  max-width: 22rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Начинаем уменьшать размер карточек */
+@media (max-width: 75em) {
+  .cards-view .shop-card {
+    min-width: 16rem;
+    max-width: 20rem;
+  }
+}
+
+/* Дальнейшее уменьшение */
+@media (max-width: 70em) {
+  .cards-view .shop-card {
+    min-width: 15rem;
+    max-width: 18rem;
+  }
+}
+
+/* Переход на две колонки */
+@media (max-width: 64em) {
+  .cards-view {
+    justify-content: space-between;
+  }
+
+  .cards-view::after {
+    flex: 0 1 calc(50% - 2rem);
+  }
+
+  .cards-view .shop-card {
+    flex: 0 1 calc(50% - 2rem);
+    min-width: 20rem;
+    max-width: 24rem;
+  }
+}
+
+/* Уменьшение карточек в двух колонках */
+@media (max-width: 56em) {
+  .cards-view .shop-card {
+    min-width: 18rem;
+    max-width: 22rem;
+  }
+}
+
+/* Переход на одну колонку */
+@media (max-width: 48em) {
+  .cards-view {
+    justify-content: center;
+  }
+
+  .cards-view::after {
+    display: none;
+  }
+
+  .cards-view .shop-card {
+    flex: 0 1 100%;
+    min-width: 24rem;
+    max-width: 32rem;
+  }
+}
+
+/* Адаптация для совсем маленьких экранов */
+@media (max-width: 30em) {
+  .cards-view .shop-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
